@@ -14,6 +14,6 @@ public class House extends FixedAsset {
 
     @Override
     public double getValue(){
-        return value;
+        return super.getValue();
     }
 }

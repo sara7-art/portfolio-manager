@@ -9,7 +9,7 @@ public class Metal extends FixedAsset {
     }
 
     @Override
-    public void getValue(){
-        return weight;
+    public double getValue(){
+        return super.getValue();
     }
 }

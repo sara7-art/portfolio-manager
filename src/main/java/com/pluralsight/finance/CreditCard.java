@@ -1,23 +1,25 @@
 package com.pluralsight.finance;
 
-public class CreditCard {
+public class CreditCard implements Valuable {
     private String name;
     private String accountNumber;
-    private double balance;
+    private double debt;
 
-    public CreditCard(String name, String accountNumber, double balance) {
+    public CreditCard(String name, String accountNumber, double debt) {
         this.name = name;
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        this.debt = debt;
     }
-    public void charge(){
+    public void charge(double amount){
+        this.debt += amount;
 
     }
-    public void pay(){
+    public void pay(double amount){
+        this.debt -= amount;
 
     }
     public double getValue(){
-        return balance;
+        return -this.debt;
     }
 }
 

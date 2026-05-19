@@ -8,7 +8,7 @@ public class Jewelry extends FixedAsset{
     }
 
     @Override
-    public void getValue(){
-        return karat;
+    public double getValue(){
+        return super.getValue();
     }
 }
